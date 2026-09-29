@@ -1,0 +1,31 @@
+{
+  "source": "01_data/raw/E题数据/附件2-数据集特征文件/aligned_50.pkl",
+  "train": 3395,
+  "valid": 728,
+  "seed": 20260924,
+  "batch_size": 64,
+  "max_epochs": 60,
+  "patience": 8,
+  "optimizer": "AdamW",
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "gradient_clip": 5.0,
+  "dropout": 0.2,
+  "consistency_coefficient": 0.2,
+  "class_counts_train": [
+    967,
+    758,
+    1670
+  ],
+  "selection": "minimum clean valid CE+Huber",
+  "best_epoch": 2,
+  "best_valid_loss": 1.1048932127900175,
+  "bert_revision": "86b5e0934494bd15c9632b12f734a8a67f723594",
+  "bert_weight_sha256": "68d45e234eb4a928074dfd868cead0219ab85354cc53d20e772753c6bb9169d3",
+  "grid_sha256": "af16a47fe3498520c5769265238345b31b03ad50fdbf84dc8f9dbd69b4ad6327",
+  "augmentation_manifest_sha256": "67b0c80b9fe46933983880d6f8458ec7ea3ff1eadfdac05f0500a6f48c8fadbc",
+  "model_parameters": 221702,
+  "frozen_bert_parameters": 109482240,
+  "pipeline_total_parameters": 109703942,
+  "trainable_parameters": 221702
+}

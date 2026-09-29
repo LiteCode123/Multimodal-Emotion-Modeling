@@ -1,0 +1,369 @@
+{
+  "method": {
+    "model": "02_tasks\\Task13_Q3_Full_Modality_Multitask_Baseline.md\\outputs\\q3_final_model.pt",
+    "baseline": "standardized zero = train content-position mean",
+    "random_trials": 20,
+    "random_seed_valid": 2026,
+    "random_seed_test": 2027,
+    "random_sampling": "without replacement within trial; key overlap allowed",
+    "low_selection": "lowest frozen Task15 within_modality_importance; stable bin-index ties",
+    "primary_unit": "paired sample x modality; Visual excludes all-zero in primary analysis",
+    "classification": "original predicted class probability drop; signed",
+    "regression": "absolute change of clipped [-3,3] output",
+    "test": "two-sided Wilcoxon, zero differences removed; rank-biserial effect",
+    "multiplicity": "BH-FDR over 12 modality x task x comparison tests within split",
+    "bootstrap": "1000 paired sample resamples; percentile 95% CI of mean gap",
+    "interval": "one frozen key interval at a time; auxiliary unadjusted Spearman",
+    "multi_position_explicit_vs_pooled_max_abs_error_valid_3_samples": {
+      "text": 3.5762786865234375e-07,
+      "audio": 7.152557373046875e-07,
+      "vision": 5.960464477539062e-07
+    }
+  },
+  "protocol_lock": {
+    "locked_after_valid_before_test": true,
+    "random_trials": 20,
+    "seed": 2026,
+    "primary": "position-count matched; Visual nonzero primary",
+    "statistics": "paired two-sided Wilcoxon, rank-biserial, 12-test BH-FDR, 1000 bootstrap",
+    "visual_sensitivity": "fixed 100 valid samples, sample-modality-mean baseline"
+  },
+  "valid_tests": [
+    {
+      "split": "valid",
+      "modality": "Text",
+      "task_type": "classification",
+      "comparison": "key_vs_random",
+      "n": 728,
+      "nonzero_pairs": 728,
+      "mean_key": 0.17978843719094664,
+      "mean_control": 0.021690278749300948,
+      "mean_difference": 0.15809815844164568,
+      "median_difference": 0.13620948046445847,
+      "win_rate": 0.9656593406593407,
+      "tie_rate": 0.0,
+      "wilcoxon_stat": 3017.0,
+      "p_raw": 1.7099446619883792e-115,
+      "effect_size": 0.9772607365199958,
+      "bootstrap_ci_low": 0.14986129993845157,
+      "bootstrap_ci_high": 0.1671735341667464,
+      "mean_key_ci": [
+        0.16974514072331098,
+        0.19003366916286912
+      ],
+      "mean_control_ci": [
+        0.01772443710934023,
+        0.02587316064105759
+      ],
+      "p_fdr": 1.0259667971930274e-114
+    },
+    {
+      "split": "valid",
+      "modality": "Text",
+      "task_type": "classification",
+      "comparison": "key_vs_low",
+      "n": 728,
+      "nonzero_pairs": 723,
+      "mean_key": 0.17978843719094664,
+      "mean_control": -0.06902525917841838,
+      "mean_difference": 0.248813696369365,
+      "median_difference": 0.2241223305463791,
+      "win_rate": 0.9862637362637363,
+      "tie_rate": 0.006868131868131868,
+      "wilcoxon_stat": 220.0,
+      "p_raw": 1.261829468690002e-119,
+      "effect_size": 0.9983188525404431,
+      "bootstrap_ci_low": 0.23742513037542556,
+      "bootstrap_ci_high": 0.2598670623234504,
+      "mean_key_ci": [
+        0.17032845964051455,
+        0.1898381234556027
+      ],
+      "mean_control_ci": [
+        -0.07516590778071147,
+        -0.06281028655204145
+      ],
+      "p_fdr": 1.5141953624280022e-118
+    },
+    {
+      "split": "valid",
+      "modality": "Text",
+      "task_type": "regression",
+      "comparison": "key_vs_random",
+      "n": 728,
+      "nonzero_pairs": 726,
+      "mean_key": 0.28779300700893606,
+      "mean_control": 0.11897052406809283,
+      "mean_difference": 0.16882248294084323,
+      "median_difference": 0.13497517816722393,
+      "win_rate": 0.8310439560439561,
+      "tie_rate": 0.0027472527472527475,
+      "wilcoxon_stat": 19002.5,
+      "p_raw": 8.069554740668597e-89,
+      "effect_size": 0.8559876620399316,
+      "bootstrap_ci_low": 0.1553648781600654,
+      "bootstrap_ci_high": 0.18230200076525632,
+      "mean_key_ci": [
+        0.2711753786341952,
+        0.30391731307788106
+      ],
+      "mean_control_ci": [
+        0.11203821123712619,
+        0.12634060451726348
+      ],
+      "p_fdr": 1.9366931377604635e-88
+    },
+    {
+      "split": "valid",
+      "modality": "Text",
+      "task_type": "regression",
+      "comparison": "key_vs_low",
+      "n": 728,
+      "nonzero_pairs": 723,
+      "mean_key": 0.28779300700893606,
+      "mean_control": 0.10760029250049738,
+      "mean_difference": 0.18019271450843866,
+      "median_difference": 0.1479036659002304,
+      "win_rate": 0.8365384615384616,
+      "tie_rate": 0.006868131868131868,
+      "wilcoxon_stat": 21787.0,
+      "p_raw": 5.640872226407061e-84,
+      "effect_size": 0.8335129104483314,
+      "bootstrap_ci_low": 0.16461149739142467,
+      "bootstrap_ci_high": 0.19595481531917128,
+      "mean_key_ci": [
+        0.2717086816426612,
+        0.3038199235209274
+      ],
+      "mean_control_ci": [
+        0.09864603944543678,
+        0.11644565916695673
+      ],
+      "p_fdr": 9.670066673840676e-84
+    },
+    {
+      "split": "valid",
+      "modality": "Audio",
+      "task_type": "classification",
+      "comparison": "key_vs_random",
+      "n": 728,
+      "nonzero_pairs": 723,
+      "mean_key": 0.007128489950856009,
+      "mean_control": -0.0009863851073109511,
+      "mean_difference": 0.008114875058166961,
+      "median_difference": 0.0034586607507662848,
+      "win_rate": 0.9478021978021978,
+      "tie_rate": 0.006868131868131868,
+      "wilcoxon_stat": 6149.0,
+      "p_raw": 3.4534667534899035e-109,
+      "effect_size": 0.9530119285053835,
+      "bootstrap_ci_low": 0.007212726041002387,
+      "bootstrap_ci_high": 0.0090443027588753,
+      "mean_key_ci": [
+        0.0062501603399741125,
+        0.008117137084827645
+      ],
+      "mean_control_ci": [
+        -0.001298470801055918,
+        -0.0006734211246075218
+      ],
+      "p_fdr": 1.0360400260469711e-108
+    },
+    {
+      "split": "valid",
+      "modality": "Audio",
+      "task_type": "classification",
+      "comparison": "key_vs_low",
+      "n": 728,
+      "nonzero_pairs": 723,
+      "mean_key": 0.007128489950856009,
+      "mean_control": -0.0038499604542176803,
+      "mean_difference": 0.01097845040507369,
+      "median_difference": 0.00498536229133606,
+      "win_rate": 0.9629120879120879,
+      "tie_rate": 0.006868131868131868,
+      "wilcoxon_stat": 4167.0,
+      "p_raw": 1.2674065054195357e-112,
+      "effect_size": 0.9681575388001192,
+      "bootstrap_ci_low": 0.009722672073313822,
+      "bootstrap_ci_high": 0.012244311066160161,
+      "mean_key_ci": [
+        0.006251802552327677,
+        0.007993717131378886
+      ],
+      "mean_control_ci": [
+        -0.004448872854789862,
+        -0.003330129518040589
+      ],
+      "p_fdr": 5.069626021678143e-112
+    },
+    {
+      "split": "valid",
+      "modality": "Audio",
+      "task_type": "regression",
+      "comparison": "key_vs_random",
+      "n": 728,
+      "nonzero_pairs": 723,
+      "mean_key": 0.01432646048296202,
+      "mean_control": 0.006327086080680921,
+      "mean_difference": 0.007999374402281099,
+      "median_difference": 0.0036656365264207125,
+      "win_rate": 0.8008241758241759,
+      "tie_rate": 0.006868131868131868,
+      "wilcoxon_stat": 35651.0,
+      "p_raw": 1.9830089770282837e-64,
+      "effect_size": 0.7275700541787977,
+      "bootstrap_ci_low": 0.0069668039647230225,
+      "bootstrap_ci_high": 0.009098351770402946,
+      "mean_key_ci": [
+        0.012942698464861938,
+        0.015717280651301985
+      ],
+      "mean_control_ci": [
+        0.005816409333330919,
+        0.006900418298619115
+      ],
+      "p_fdr": 2.3796107724339405e-64
+    },
+    {
+      "split": "valid",
+      "modality": "Audio",
+      "task_type": "regression",
+      "comparison": "key_vs_low",
+      "n": 728,
+      "nonzero_pairs": 723,
+      "mean_key": 0.01432646048296202,
+      "mean_control": 0.0060613959065669186,
+      "mean_difference": 0.0082650645763951,
+      "median_difference": 0.0036615878343582153,
+      "win_rate": 0.8173076923076923,
+      "tie_rate": 0.006868131868131868,
+      "wilcoxon_stat": 36035.0,
+      "p_raw": 6.326665451846528e-64,
+      "effect_size": 0.7246356877039346,
+      "bootstrap_ci_low": 0.007079818814092285,
+      "bootstrap_ci_high": 0.00946318197286698,
+      "mean_key_ci": [
+        0.01298359792447997,
+        0.01569682607589709
+      ],
+      "mean_control_ci": [
+        0.005301482385026987,
+        0.007006578624138486
+      ],
+      "p_fdr": 6.901816856559848e-64
+    },
+    {
+      "split": "valid",
+      "modality": "Visual",
+      "task_type": "classification",
+      "comparison": "key_vs_random",
+      "n": 713,
+      "nonzero_pairs": 708,
+      "mean_key": 0.004660639948463707,
+      "mean_control": -0.0007931230204364356,
+      "mean_difference": 0.005453762968900143,
+      "median_difference": 0.0017567694303579628,
+      "win_rate": 0.8751753155680224,
+      "tie_rate": 0.0070126227208976155,
+      "wilcoxon_stat": 18589.0,
+      "p_raw": 7.469734817652365e-86,
+      "effect_size": 0.8518722159801742,
+      "bootstrap_ci_low": 0.0046903795742176835,
+      "bootstrap_ci_high": 0.006369815295021625,
+      "mean_key_ci": [
+        0.003614985097466144,
+        0.005801497315165037
+      ],
+      "mean_control_ci": [
+        -0.0013607713577392531,
+        -0.0002691203438297313
+      ],
+      "p_fdr": 1.493946963530473e-85
+    },
+    {
+      "split": "valid",
+      "modality": "Visual",
+      "task_type": "classification",
+      "comparison": "key_vs_low",
+      "n": 713,
+      "nonzero_pairs": 708,
+      "mean_key": 0.004660639948463707,
+      "mean_control": -0.0023423224311389895,
+      "mean_difference": 0.007002962379602697,
+      "median_difference": 0.0023620128631591797,
+      "win_rate": 0.8274894810659187,
+      "tie_rate": 0.0070126227208976155,
+      "wilcoxon_stat": 26794.5,
+      "p_raw": 1.856449601344219e-73,
+      "effect_size": 0.7864860988262293,
+      "bootstrap_ci_low": 0.00582201110844358,
+      "bootstrap_ci_high": 0.008075268008598606,
+      "mean_key_ci": [
+        0.0034527581420218958,
+        0.005755509942937198
+      ],
+      "mean_control_ci": [
+        -0.0028323582113625122,
+        -0.0018534766423919595
+      ],
+      "p_fdr": 2.7846744020163286e-73
+    },
+    {
+      "split": "valid",
+      "modality": "Visual",
+      "task_type": "regression",
+      "comparison": "key_vs_random",
+      "n": 713,
+      "nonzero_pairs": 710,
+      "mean_key": 0.013239377626279292,
+      "mean_control": 0.006785104426051305,
+      "mean_difference": 0.006454273200227989,
+      "median_difference": 0.0017566276947036386,
+      "win_rate": 0.726507713884993,
+      "tie_rate": 0.004207573632538569,
+      "wilcoxon_stat": 49229.0,
+      "p_raw": 5.0800079157848337e-45,
+      "effect_size": 0.609920564172659,
+      "bootstrap_ci_low": 0.005395130565073379,
+      "bootstrap_ci_high": 0.007523653629581923,
+      "mean_key_ci": [
+        0.011675020478872209,
+        0.014934715272095915
+      ],
+      "mean_control_ci": [
+        0.0059955776228491605,
+        0.0076402524163457644
+      ],
+      "p_fdr": 5.080007915784833e-45
+    },
+    {
+      "split": "valid",
+      "modality": "Visual",
+      "task_type": "regression",
+      "comparison": "key_vs_low",
+      "n": 713,
+      "nonzero_pairs": 708,
+      "mean_key": 0.013239377626279292,
+      "mean_control": 0.005272416520712252,
+      "mean_difference": 0.007966961105567041,
+      "median_difference": 0.0028257369995117188,
+      "win_rate": 0.8120617110799438,
+      "tie_rate": 0.0070126227208976155,
+      "wilcoxon_stat": 32907.0,
+      "p_raw": 7.2945097156109935e-65,
+      "effect_size": 0.7377782027682819,
+      "bootstrap_ci_low": 0.006818349303959818,
+      "bootstrap_ci_high": 0.009304356705044693,
+      "mean_key_ci": [
+        0.011617836334022889,
+        0.015045735346895302
+      ],
+      "mean_control_ci": [
+        0.004542806411232554,
+        0.006040219492494516
+      ],
+      "p_fdr": 9.726012954147992e-65
+    }
+  ]
+}

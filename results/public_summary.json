@@ -1,0 +1,21 @@
+{
+  "q1": {
+    "sample_count": 100,
+    "bins_per_sample": 50,
+    "feature_rows": 5000,
+    "feature_columns": 843,
+    "text_dimensions": 768,
+    "official_text_valid_bins": 4414,
+    "asr_anchor_interpolation_samples": 74,
+    "proportional_timing_fallback_samples": 26,
+    "validation_status": "PASS"
+  },
+  "q2": {
+    "independent_test_samples": 727,
+    "attachment3_unlabeled_predictions": 30
+  },
+  "q3": {
+    "independent_test_samples": 727,
+    "attachment4_unlabeled_predictions_and_explanations": 20
+  }
+}

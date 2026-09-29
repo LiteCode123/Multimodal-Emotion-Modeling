@@ -1,0 +1,18 @@
+# Pinned versions used by the original Q1–Q3 environment (Python 3.10.11).
+numpy==2.2.6
+pandas==2.3.3
+scipy==1.15.3
+scikit-learn==1.7.2
+torch==2.14.0
+transformers==5.17.0
+matplotlib==3.10.9
+joblib==1.6.0
+statsmodels==0.15.0
+Pillow==12.3.0
+av==17.1.0
+faster-whisper==1.2.1
+openpyxl==3.1.5
+librosa==0.11.0
+opencv-contrib-python==5.0.0.93
+mediapipe==1.0.1
+pyarrow==25.0.1

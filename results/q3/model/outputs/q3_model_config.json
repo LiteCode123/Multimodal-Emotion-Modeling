@@ -1,0 +1,18 @@
+{
+  "name": "C_gated_weighted",
+  "fusion": "gated",
+  "weighted": true,
+  "lambda_reg": 1.0,
+  "hidden": 128,
+  "dropout": 0.2,
+  "seed": 2026,
+  "batch_size": 128,
+  "learning_rate": 0.0008,
+  "weight_decay": 0.001,
+  "max_epochs": 60,
+  "patience": 8,
+  "best_epoch": 4,
+  "selection_rule": "max(valid_macro_f1 + 0.2*accuracy - 0.1*MAE + 0.1*Pearson)",
+  "preprocessing": "train content-position z-score; mean pooling after normalization",
+  "model_input": "preprocessed [B,50,D] and structural mask [B,50], or equivalent pooled [B,D]"
+}

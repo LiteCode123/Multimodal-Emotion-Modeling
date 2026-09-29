@@ -1,0 +1,14 @@
+{
+  "feature_version": "aligned_50",
+  "source": "data/raw/E题数据/附件2-数据集特征文件/aligned_50.pkl",
+  "attachment4": "data/raw/E题数据/附件4-可解释专项视频样本与特征文件/附件4-可解释专项视频样本与特征文件/对齐版本",
+  "checkpoint": "results/q3/model/outputs/q3_final_model.pt",
+  "preprocessing": "results/q3/model/outputs/q3_preprocessing.npz",
+  "seed": 2026,
+  "sequence_length": 50,
+  "fusion": "gated",
+  "hidden": 128,
+  "dropout": 0.2,
+  "key_interval_coverage": 0.6,
+  "run_dir": "runs/q3"
+}
