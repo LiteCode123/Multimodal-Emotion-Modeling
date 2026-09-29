@@ -1,6 +1,6 @@
 # Multimodal Emotion Modeling
 
-![三问整体流程图](docs/images/project_workflow.png)
+![三问整体流程图](docs/images/流程图.png)
 
 围绕复杂场景下的多模态情感识别，项目展示三项已经完成并经过核验的工作：从原始视频构建统一时间轴特征；在局部模态缺失下训练和评估情感预测模型；对冻结模型的预测做模态贡献、关键位置和忠实性分析。
 
